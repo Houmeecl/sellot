@@ -16,6 +16,10 @@ app.use('/api/companies', companyRoutes);
 app.use('/api/evaluations', evaluationRoutes);
 app.use('/api/sync', syncRoutes);
 
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
